@@ -1,0 +1,27 @@
+export const patterns = [
+ {zh:'菱花窗',en:'Diamond lattice',short:'菱花',idea:'秩序与生机',ideaEn:'Order & life',description:'直线交织成菱，秩序之中，窗外的枝叶又添一层自由。',descriptionEn:'Intersecting lines create an ordered lattice; the plants beyond add a living, changing layer.',note:'重复与对称构成节奏，几何窗格与自然景物相映成趣。',noteEn:'Repetition and symmetry create a rhythm against an ever-changing landscape.'},
+ {zh:'冰裂纹窗',en:'Ice-crack lattice',short:'冰裂',idea:'自然的节奏',ideaEn:'Nature’s rhythms',description:'取意冰面开裂的不规则线条，在错落之间发现自然的节奏。',descriptionEn:'Irregular lines recall cracks in ice, finding rhythm in an apparently random natural form.',note:'冰纹模仿自然冰裂；与梅花相配时，又可引出傲寒的意趣。',noteEn:'Ice-crack motifs imitate natural fractures. Paired with plum blossom, they can evoke endurance in winter.'},
+ {zh:'海棠意象窗',en:'Begonia-inspired lattice',short:'海棠',idea:'花形入窗',ideaEn:'A floral outline',description:'以四瓣花形组织曲线，柔和的边界让建筑也有了花木的姿态。',descriptionEn:'A four-lobed floral outline brings the softness of a flowering form into architectural geometry.',note:'花形曲线与窗内格纹相互呼应；这里提炼海棠形的造型意象。',noteEn:'A study of floral curves and geometric lines, inspired by traditional begonia-shaped openings.'},
+ {zh:'六角纹窗',en:'Hexagonal lattice',short:'六角',idea:'连绵的几何',ideaEn:'Connected geometry',description:'六角单元彼此连接，在有限的圆框里，形成向外延展的节律。',descriptionEn:'Connected hexagonal cells suggest a pattern that continues beyond the circular frame.',note:'重复的六角构成通透窗芯，也让光影随时间在地面上移动。',noteEn:'Repeating hexagons form an open lattice, shaping light and shadow as the day changes.'}
+];
+patterns.push(
+ {zh:'折线木格 · 沧浪亭研习',en:'Angular timber lattice · Canglang study',short:'折线木格',idea:'竹影与折线',ideaEn:'Bamboo & angular lines',description:'依沧浪亭木格与竹影照片提炼折线单元。木纹、接缝和厚度为解释性补全。',descriptionEn:'Angular units interpreted from a Canglang timber-lattice photograph. Grain, joints and depth are inferred.',note:'照片复原研习 · 木质外观',noteEn:'Photo-based study · timber appearance'},
+ {zh:'八角窗框 · 留园研习',en:'Octagonal frame · Lingering Garden study',short:'八角窗框',idea:'留白即风景',ideaEn:'An opening for the view',description:'依据留园八角窗照片复原轮廓，不添加原照片中不存在的窗芯。石质外观与厚度为推定。',descriptionEn:'An octagonal outline based on a Lingering Garden photograph, with no invented lattice. Stone appearance and depth are inferred.',note:'照片复原研习 · 灰石外观推定',noteEn:'Photo-based study · inferred gray stone'},
+ {zh:'木格扇 · 沧浪亭研习',en:'Timber panel · Canglang study',short:'木格扇',idea:'曲折中的秩序',ideaEn:'Order within turns',description:'依沧浪亭格扇照片提炼矩形骨架与回折线条，局部节点简化；并非原构件等比例副本。',descriptionEn:'A rectangular framework and returning lines interpreted from a Canglang panel photograph. Joints are simplified; this is not a scale replica.',note:'照片复原研习 · 木质外观',noteEn:'Photo-based study · timber appearance'}
+);
+export function patternLines(index){
+ const lines=[]; const add=(a,b)=>lines.push([a,b]);
+ if(index===0){for(let i=-160;i<=160;i+=31){add([-150,-150+i],[150,150+i]);add([-150,150+i],[150,-150+i]);}}
+ if(index===1){
+ const pts=[[-100,-15],[-68,-42],[-82,-83],[-35,-88],[-22,-47],[10,-68],[43,-92],[56,-52],[96,-37],[69,-7],[98,27],[59,40],[55,84],[15,64],[-12,95],[-33,52],[-75,67],[-60,16],[-16,8],[19,-17],[26,25],[-5,47],[-48,-15]];
+ const edges=[[0,1],[1,2],[1,4],[2,3],[3,4],[4,5],[5,6],[5,7],[6,7],[7,8],[7,9],[8,9],[9,10],[9,11],[10,11],[11,12],[12,13],[13,14],[14,15],[13,20],[15,16],[16,17],[17,0],[17,18],[18,19],[19,9],[20,19],[20,21],[21,15],[21,18],[18,22],[22,1],[22,4],[4,19],[4,18],[17,22]];
+ edges.forEach(([a,b])=>add(pts[a],pts[b]));
+ }if(index===2){
+ const inner=[];for(let j=0;j<=96;j++){const t=j/96*Math.PI*2,r=52+14*Math.cos(t*4);inner.push([r*Math.cos(t),r*Math.sin(t)]);if(j) add(inner[j-1],inner[j]);}
+ for(let j=0;j<8;j++){const t=j*Math.PI/4,r=52+14*Math.cos(t*4);add([r*Math.cos(t),r*Math.sin(t)],[102*Math.cos(t),102*Math.sin(t)]);}
+ for(let i=-30;i<=30;i+=30){add([i,-35],[i,35]);add([-35,i],[35,i]);}
+ }if(index===3){const r=23;for(let col=-4;col<=4;col++)for(let row=-4;row<=4;row++){const cx=col*r*1.5,cy=(row*2+(Math.abs(col)%2))*r*Math.sqrt(3)/2;for(let j=0;j<6;j++){let a=j*Math.PI/3,b=(j+1)*Math.PI/3;add([cx+r*Math.cos(a),cy+r*Math.sin(a)],[cx+r*Math.cos(b),cy+r*Math.sin(b)]);}}}
+ return lines;
+}
+export function clipLine(a,b,r=95){const dx=b[0]-a[0],dy=b[1]-a[1],A=dx*dx+dy*dy,B=2*(a[0]*dx+a[1]*dy),C=a[0]*a[0]+a[1]*a[1]-r*r,d=B*B-4*A*C;if(d<0||A===0)return null;const t0=Math.max(0,(-B-Math.sqrt(d))/(2*A)),t1=Math.min(1,(-B+Math.sqrt(d))/(2*A));return t0<t1?[[a[0]+dx*t0,a[1]+dy*t0],[a[0]+dx*t1,a[1]+dy*t1]]:null;}
+export function patternSVG(index){if(index>=4){const shape=index===5?'<path d="M-40 -97H40L97 -40V40L40 97H-40L-97 40V-40Z" fill="none" stroke="currentColor" stroke-width="10"/>':`<rect x="-80" y="-98" width="160" height="196" fill="none" stroke="currentColor" stroke-width="8"/><g fill="none" stroke="currentColor" stroke-width="3">${Array.from({length:9},(_,i)=>{const x=i%3*50-72,y=Math.floor(i/3)*60-87;return `<path d="M${x} ${y}h40v50h-15v-20h-25v-15h25V${y}"/>`;}).join('')}</g>`;return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -110 220 220" aria-hidden="true">${shape}</svg>`;}const lines=patternLines(index).map(l=>clipLine(...l)).filter(Boolean);return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -110 220 220" aria-hidden="true"><circle r="102" fill="#d7ddc9"/><g fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="square">${lines.map(([a,b])=>`<path d="M${a[0]},${a[1]}L${b[0]},${b[1]}"/>`).join('')}<circle r="98" stroke-width="7"/><circle r="104" stroke-width="1"/></g></svg>`;}

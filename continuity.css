@@ -1,0 +1,182 @@
+/* One uninterrupted paper ground across all sticky chapters. */
+body.full-exhibition{
+  background-color:rgb(var(--paper-base,230,231,224));
+  background-image:url('assets/paper-grain.svg'),radial-gradient(ellipse at 89% 18%,rgba(var(--paper-light,255,255,255),.6) 0%,transparent 48%),linear-gradient(105deg,rgb(var(--paper-base,230,231,224)) 27%,rgb(var(--paper-middle,222,223,220)) 76%,rgb(var(--paper-edge,233,234,229)));
+  background-size:260px 260px,100vw 100svh,100vw 100svh;
+  background-repeat:repeat,no-repeat,no-repeat;
+  background-attachment:fixed;
+}
+.full-exhibition #home,
+.full-exhibition .film,
+.full-exhibition .stage,
+.full-exhibition .film-stage{
+  background:none;
+}
+.full-exhibition .film-stage::before{
+  content:'';
+  position:absolute;
+  left:-17vw;
+  top:21%;
+  width:53vw;
+  height:70%;
+  background-image:url('assets/painting-w1.jpg');
+  background-size:185% auto;
+  background-position:0% 25%;
+  background-repeat:no-repeat;
+  filter:grayscale(1) contrast(1.18) brightness(1.14);
+  opacity:.25;
+  mix-blend-mode:multiply;
+  mask-image:radial-gradient(ellipse at center,#000 20%,transparent 72%);
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 20%,transparent 72%);
+  pointer-events:none;
+}
+.full-exhibition .object-stage::before{
+  left:-23vw;
+  top:47%;
+  width:36vw;
+  height:57%;
+  background-size:230% auto;
+  background-position:4% 40%;
+  opacity:.18;
+}
+.full-exhibition .object-area{z-index:1}
+.full-exhibition .pattern-stage::before{
+  left:-13vw;
+  top:-7%;
+  width:49vw;
+  height:73%;
+  background-position:12% 0%;
+  opacity:.26;
+}
+.full-exhibition .garden-stage::before,
+.full-exhibition .closing-stage::before{content:none}
+.full-exhibition .garden-stage::after{background:none}
+.full-exhibition .culture-stage::before{
+  background-image:url('assets/painting-w2.jpg');
+  background-size:175% auto;
+  background-position:5% 68%;
+  left:-19vw;
+  top:28%;
+  width:58vw;
+  height:81%;
+  opacity:.22;
+}
+.full-exhibition .play-stage::before{
+  background-position:70% 91%;
+  background-size:220% auto;
+  left:-3vw;
+  top:-24%;
+  width:55vw;
+  height:78%;
+  opacity:.25;
+}
+.full-exhibition .card-stage::before{
+  background-image:url('assets/painting-w3.jpg');
+  background-size:170% auto;
+  background-position:20% 64%;
+  left:auto;
+  right:-19vw;
+  top:auto;
+  bottom:-21%;
+  width:65vw;
+  height:83%;
+  opacity:.28;
+}
+.full-exhibition .pattern-stage::after,
+.full-exhibition .culture-stage::after,
+.full-exhibition .play-stage::after,
+.full-exhibition .card-stage::after{
+  content:'';
+  position:absolute;
+  right:-8vw;
+  top:-12%;
+  width:43vw;
+  height:61%;
+  background-image:url('assets/painting-w3.jpg');
+  background-size:200% auto;
+  background-position:11% 19%;
+  background-repeat:no-repeat;
+  filter:grayscale(1) contrast(1.18) brightness(1.14);
+  opacity:.20;
+  mix-blend-mode:multiply;
+  mask-image:radial-gradient(ellipse at center,#000 15%,transparent 70%);
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 15%,transparent 70%);
+  pointer-events:none;
+}
+.full-exhibition .pattern-stage::after{
+  top:auto;
+  bottom:-14%;
+  right:-9vw;
+  background-position:68% 83%;
+  opacity:.23;
+}
+.full-exhibition .culture-stage::after{
+  top:-18%;
+  right:-12vw;
+  background-image:url('assets/painting-w1.jpg');
+  background-position:6% 8%;
+  opacity:.24;
+}
+.full-exhibition .play-stage::after{
+  top:auto;
+  bottom:-18%;
+  width:45vw;
+  right:-11vw;
+  background-image:url('assets/painting-w2.jpg');
+  background-position:83% 73%;
+  opacity:.22;
+}
+.full-exhibition .card-stage::after{
+  top:-22%;
+  left:-10vw;
+  right:auto;
+  width:51vw;
+  height:72%;
+  background-image:url('assets/painting-w1.jpg');
+  background-position:76% 81%;
+  opacity:.26;
+}
+.full-exhibition .pattern-window,
+.full-exhibition .framing-area,
+.full-exhibition .play-heading,
+.full-exhibition .game-shell,
+.full-exhibition .card-display{z-index:1}
+.full-exhibition .exhibition-footer{
+  background:linear-gradient(180deg,transparent 0%,rgba(var(--paper-middle,222,223,220),.08) 150px,rgba(var(--paper-middle,222,223,220),.15) 100%);
+}
+/* A tighter, nearly square leaf keeps the figure, tree and pavilion together. */
+.full-exhibition .closing-leaf{
+  left:auto;
+  right:3%;
+  top:50%;
+  width:min(64vw,96svh);
+  height:auto;
+  aspect-ratio:1953 / 1739;
+  translate:0 -50%;
+  transform-origin:50% 50%;
+  mask-image:url('edge-leaf.svg');
+  -webkit-mask-image:url('edge-leaf.svg');
+}
+.full-exhibition .closing-leaf img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:56% 46%;
+  transform:scale(1.16);
+  transform-origin:56% 46%;
+}
+.full-exhibition .closing-copy{width:27%}
+@media(max-width:700px){
+  .full-exhibition .film-stage::before{width:110vw;left:-48vw;opacity:.18}
+  .full-exhibition .object-stage::before{width:73vw;left:-46vw;top:52%;opacity:.14}
+  .full-exhibition .pattern-stage::before{top:-2%;height:59%;left:-44vw;opacity:.21}
+  .full-exhibition .culture-stage::before{top:13%;width:125vw;left:-61vw;opacity:.17}
+  .full-exhibition .play-stage::before{top:-14%;width:115vw;left:-25vw;height:63%;opacity:.19}
+  .full-exhibition .card-stage::before{left:auto;right:-48vw;bottom:-12%;width:120vw;height:65%;opacity:.21}
+  .full-exhibition .pattern-stage::after,
+  .full-exhibition .culture-stage::after,
+  .full-exhibition .play-stage::after{width:88vw;right:-49vw;height:49%;opacity:.16}
+  .full-exhibition .card-stage::after{width:105vw;left:-40vw;right:auto;top:-15%;height:50%;opacity:.19}
+  .full-exhibition .closing-leaf{left:auto;right:-3%;top:64%;width:min(105vw,76svh);height:auto;opacity:.85}
+  .full-exhibition .closing-copy{left:9%;top:11%;width:82%}
+}

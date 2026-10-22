@@ -1,0 +1,32 @@
+[
+  {
+    "id": 4,
+    "name": "折线木格 / Angular timber lattice",
+    "site": "沧浪亭 / Canglang Pavilion",
+    "photo": "photo-8.jpg",
+    "material": "木质外观；树种、涂层、年代未核实 / timber appearance; species, finish and date unverified",
+    "method": "依据照片提炼折线单元，推定厚度与节点 / photo-based motif reconstruction; inferred depth and joints",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%E8%8B%8F%E5%B7%9E%E6%B2%A7%E6%B5%AA%E4%BA%AD%E7%9A%84%E7%AB%B9%E5%AD%90.jpg"
+  },
+  {
+    "id": 5,
+    "name": "八角窗框 / Octagonal frame",
+    "site": "留园 / Lingering Garden",
+    "photo": "photo-5.jpg",
+    "material": "灰石外观推定；非材质鉴定 / inferred gray stone appearance, not material identification",
+    "method": "依据照片复原八角轮廓；无虚构窗芯；分块接缝与厚度为推定 / photo-based outline; no invented lattice; joints and depth inferred",
+    "license": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Through_the_octagonal_window_(6508372507).jpg"
+  },
+  {
+    "id": 6,
+    "name": "木格扇 / Timber panel",
+    "site": "沧浪亭 / Canglang Pavilion",
+    "photo": "photo-7.jpg",
+    "material": "木质外观；树种、涂层未核实 / timber appearance; species and finish unverified",
+    "method": "照片提炼矩形骨架和回折线；节点简化，非精确副本 / photo-based framework and returning lines; simplified joints, not an exact replica",
+    "license": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%E8%8B%8F%E5%B7%9E%E6%B2%A7%E6%B5%AA%E4%BA%AD%E6%A0%BC%E6%89%87.JPG"
+  }
+]

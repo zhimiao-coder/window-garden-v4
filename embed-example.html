@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>独立嵌入示例 · 窗中有园</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="source-page"><a href="index.html">← 返回展览 / Back to exhibition</a>
+<h1>让一扇窗，走进你的网页。<br>Embed the window studies.</h1>
+<p>下方独立加载本网站的 viewer.html，使用同目录资源。<br>This example loads viewer.html and the resources from this website.</p>
+<iframe class="embed-demo" src="viewer.html?model=4" title="交互式苏州花窗构件研习 / Interactive Suzhou window studies" loading="lazy" allow="fullscreen"></iframe>
+<h2>同站点嵌入 / Same-site embedding</h2>
+<pre>&lt;iframe
+  src="viewer.html?model=4"
+  title="Interactive Suzhou window studies"
+  style="width:100%;height:900px;border:0"
+  loading="lazy"
+  allow="fullscreen"&gt;
+&lt;/iframe&gt;</pre>
+<p>嵌入其他网站时，将 src 替换为发布后 viewer.html 的完整 HTTPS 地址。是否允许跨站嵌入取决于托管平台的框架策略。<br>To embed on another website, use the full HTTPS address of the published viewer.html. Cross-site embedding depends on the host’s frame policy.</p>
+<h2>模型参数 / Models</h2>
+<p>model=4：折线木格；5：八角窗框；6：木格扇；0–3：四种母题。中英同屏显示。render=2d 显示静态替代图。<br>model=4: angular timber lattice; 5: octagonal frame; 6: timber panel; 0–3: motif studies. Chinese and English appear together. render=2d selects a static alternative.</p>
+<h2>资源 / Resources</h2>
+<p>请保留完整交付目录，尤其是 vendor/、assets/、sources.html 及字体与代码许可。通过 HTTP 或 HTTPS 访问，直接双击 HTML 文件无法可靠运行模块。<br>Keep the complete delivery directory, including vendor/, assets/, sources.html and the font and code licenses. Serve through HTTP or HTTPS; opening the HTML file directly cannot reliably load modules.</p>
+<p><a href="sources.html">图像、模型与许可 / Images, models & licenses</a> · <a href="viewer.html">独立3D / Standalone 3D</a></p>
+</main></body></html>

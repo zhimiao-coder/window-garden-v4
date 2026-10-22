@@ -1,0 +1,101 @@
+/* Keep interactive controls in view on shorter phones and compact desktop tabs. */
+.full-exhibition .film-stage{overflow:clip}
+.full-exhibition .quiz-panel{overscroll-behavior-y:contain;scroll-padding:12px}
+.full-exhibition .model-note h3 .zh{display:inline}
+.full-exhibition .model-note h3 .en{display:inline;margin-left:12px}
+.full-exhibition .game-info>.game-instruction{margin:0}
+.full-exhibition .pattern-object:focus-visible{outline-offset:-4px}
+@media(min-width:701px) and (max-height:760px){
+  .full-exhibition .film-stage{min-height:0;height:100svh}
+  .full-exhibition .object-copy{top:10%}
+  .full-exhibition .object-copy h1{font-size:31px}
+  .full-exhibition .object-copy>.english{font-size:20px;margin-top:12px}
+  .full-exhibition .note-sequence{margin-top:22px}
+  .full-exhibition .model-note p{font-size:16px}
+  .full-exhibition .model-note p .en{font-size:13px;margin-top:8px}
+  .full-exhibition .object-area{top:2%;height:93%}
+  .full-exhibition .object-tools{margin-top:10px;gap:8px}
+  .full-exhibition .object-label h2{font-size:21px}
+  .full-exhibition .pattern-art{height:34vh;margin-bottom:22px}
+  .full-exhibition .pattern-object h3{font-size:23px}
+  .full-exhibition .pattern-object>p{font-size:15px}
+  .full-exhibition .play-heading{top:5%}
+  .full-exhibition .play-heading h2{font-size:25px}
+  .full-exhibition .game-shell{top:24%;bottom:6%}
+  .full-exhibition .puzzle-board{height:49vh}
+  .full-exhibition .game-selects{margin-top:16px}
+  .full-exhibition .game-stats{margin:10px 0}
+  .full-exhibition .game-stats img{height:48px}
+  .full-exhibition .quiz-panel h3{font-size:22px;margin-top:7px}
+  .full-exhibition .quiz-panel h3 .en{font-size:14px}
+  .full-exhibition #quiz-options{margin-top:10px}
+  .full-exhibition #quiz-options button{padding:7px 14px}
+  .full-exhibition #quiz-feedback{font-size:12px;margin:8px 0}
+  .full-exhibition .card-copy{top:9%}
+  .full-exhibition .card-copy h2{font-size:28px}
+  .full-exhibition .card-copy>.english{font-size:20px;margin-top:10px}
+  .full-exhibition .postcard-builder{margin-top:20px}
+}
+@media(max-width:700px){
+  .full-exhibition .object-copy{top:5%}
+  .full-exhibition .object-area{top:33%;height:63%}
+  .full-exhibition .note-sequence{margin-top:13px}
+  .full-exhibition .model-note p{max-width:none}
+  .full-exhibition .model-note p .en{font-size:12px}
+  .full-exhibition .play-stage{height:100svh;min-height:0}
+  .full-exhibition .play-heading{top:4%}
+  .full-exhibition .play-heading .eyebrow{margin-bottom:10px}
+  .full-exhibition .play-heading h2{font-size:25px}
+  .full-exhibition .play-heading .game-tabs{margin-top:12px}
+  .full-exhibition .game-shell{top:25%;bottom:6%}
+  .full-exhibition .game-panel{gap:12px}
+  .full-exhibition .game-info #puzzle-feedback{margin-top:6px}
+  .full-exhibition .game-tabs button .zh,
+  .full-exhibition .game-actions button .zh,
+  .full-exhibition .download-actions button .zh,
+  .full-exhibition .card-sides button .zh{display:inline}
+}
+@media(max-width:700px) and (max-height:760px){
+  .full-exhibition .object-copy h1{font-size:24px}
+  .full-exhibition .object-copy>.english{font-size:15px}
+  .full-exhibition .object-area{top:37%;height:59%}
+  .full-exhibition .note-sequence{margin-top:11px}
+  .full-exhibition .model-note h3{font-size:16px}
+  .full-exhibition .model-note p{font-size:13px;line-height:1.4}
+  .full-exhibition .model-note p .en{font-size:11px;line-height:1.35}
+  .full-exhibition .object-label h2{font-size:17px}
+  .full-exhibition .object-tools{margin-top:8px;gap:6px}
+  .full-exhibition .three-options button{padding:7px 16px}
+  .full-exhibition .play-heading h2{font-size:23px}
+  .full-exhibition .play-heading h2 .english{font-size:16px;margin-top:5px}
+  .full-exhibition .play-heading .eyebrow{margin-bottom:8px}
+  .full-exhibition .play-heading .game-tabs{margin-top:9px}
+  .full-exhibition .game-shell{top:27%;bottom:5%}
+  .full-exhibition .game-panel{gap:8px}
+  .full-exhibition .game-selects{margin-top:10px}
+  .full-exhibition .game-actions{margin-top:9px}
+  .full-exhibition .game-actions button{padding:7px 12px;min-height:34px}
+  .full-exhibition .game-instruction{font-size:15px}
+  .full-exhibition .game-instruction .english{font-size:12px}
+  .full-exhibition .quiz-panel h3{font-size:21px;line-height:1.35;margin:10px 0}
+  .full-exhibition .quiz-panel h3 .en{font-size:14px;line-height:1.4;margin-top:5px}
+  .full-exhibition #quiz-count{font-size:12px;line-height:1.4}
+  .full-exhibition #quiz-options{margin-top:12px}
+  .full-exhibition #quiz-options button{padding:7px 12px;min-height:46px;font-size:13px;line-height:1.35}
+  .full-exhibition #quiz-options button .en{font-size:11px;line-height:1.35;margin-top:3px}
+  .full-exhibition #quiz-feedback{font-size:12px;line-height:1.4;margin:10px 0}
+  .full-exhibition #quiz-feedback .en{font-size:11px;line-height:1.4;margin-top:5px}
+  .full-exhibition #quiz-next,.full-exhibition #quiz-restart{padding:7px 16px;font-size:13px}
+  .full-exhibition .card-stage{height:100svh;min-height:0}
+  .full-exhibition .card-display{top:5%;width:84%;left:8%}
+  .full-exhibition .card-copy{top:41%}
+  .full-exhibition .card-copy .eyebrow{margin-bottom:7px}
+  .full-exhibition .card-copy h2{font-size:24px}
+  .full-exhibition .card-copy>.english{font-size:17px;margin-top:5px}
+  .full-exhibition .postcard-builder{margin-top:12px}
+  .full-exhibition .card-sides{margin:9px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .full-exhibition .poem-window{mask-image:none;-webkit-mask-image:none;overflow:hidden}
+  .full-exhibition .pattern-window{mask-image:none;-webkit-mask-image:none}
+}
